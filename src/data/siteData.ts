@@ -5,8 +5,7 @@ export const siteData: SiteData = {
     name: "Apil Gurung",
     headline: "Angular Frontend Developer",
     summary:
-      "Frontend developer specializing in Angular, TypeScript, and enterprise web applications. Experienced building scalable UI features and integrating APIs.",
-    location: "Seoul, South Korea",
+      "Frontend developer specializing in Angular, React, TypeScript, and enterprise web applications. Experienced building scalable UI features and integrating APIs.",
   },
 
   links: {

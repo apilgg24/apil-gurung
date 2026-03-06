@@ -4,7 +4,7 @@ export default function HeroSection() {
   const { profile, links } = siteData
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-slate-950 text-white">
+    <section className="min-h-screen flex items-center justify-center bg-slate-950 text-white pt-16">
       <div className="text-center max-w-xl px-6">
         <p className="text-sm uppercase tracking-[0.2em] text-slate-400">
           {profile.headline}

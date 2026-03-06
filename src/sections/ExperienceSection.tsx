@@ -4,7 +4,7 @@ export default function ExperienceSection() {
   const { experience } = siteData
 
   return (
-    <section className="bg-slate-900 text-white py-20">
+    <section id="experience" className="bg-slate-900 text-white py-20">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="text-3xl font-bold">Experience</h2>
 

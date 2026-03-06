@@ -4,7 +4,7 @@ export default function ProjectsSection() {
   const { projects } = siteData
 
   return (
-    <section className="bg-slate-950 text-white py-20">
+    <section id="projects" className="bg-slate-950 text-white py-20">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="text-3xl font-bold">Projects</h2>
 

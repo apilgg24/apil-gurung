@@ -17,7 +17,7 @@ export type SiteData = {
     name: string
     headline: string
     summary: string
-    location: string
+    location?: string
   }
   links: {
     github: string
