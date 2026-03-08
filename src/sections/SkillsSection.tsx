@@ -10,23 +10,36 @@ export default function SkillsSection() {
   ]
 
   return (
-    <section className="bg-slate-900 text-white py-20">
+    <section id="skills" className="py-20" style={{ backgroundColor: "var(--color-bg-alt)" }}>
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="text-3xl font-bold">Skills</h2>
+        <h2 className="text-3xl font-bold" style={{ color: "var(--color-primary)" }}>
+          Skills
+        </h2>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {groups.map((group) => (
             <div
               key={group.title}
-              className="rounded-2xl border border-slate-800 bg-slate-950 p-6"
+              className="rounded-xl p-6 shadow-md"
+              style={{
+                backgroundColor: "var(--color-surface)",
+                border: "1px solid var(--color-border)",
+              }}
             >
-              <h3 className="text-lg font-semibold">{group.title}</h3>
+              <h3 className="text-lg font-semibold" style={{ color: "var(--color-text)" }}>
+                {group.title}
+              </h3>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-slate-700 px-3 py-1 text-sm text-slate-300"
+                    className="rounded-full px-3 py-1 text-sm"
+                    style={{
+                      border: "1px solid var(--color-border)",
+                      color: "var(--color-accent)",
+                      backgroundColor: "var(--color-bg-alt)",
+                    }}
                   >
                     {item}
                   </span>

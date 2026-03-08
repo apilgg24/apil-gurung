@@ -3,9 +3,9 @@ import type { SiteData } from "../types/site"
 export const siteData: SiteData = {
   profile: {
     name: "Apil Gurung",
-    headline: "Angular Frontend Developer",
+    headline: "Software Developer",
     summary:
-      "Frontend developer specializing in Angular, React, TypeScript, and enterprise web applications. Experienced building scalable UI features and integrating APIs.",
+      "Software developer specializing in Angular, React, TypeScript, and enterprise web applications. Experienced building scalable UI features and integrating APIs.",
   },
 
   links: {
@@ -22,9 +22,9 @@ export const siteData: SiteData = {
 
   experience: [
     {
-      company: "Xcelerate Restoration",
+      company: "Xcelerate Restoration Software",
       role: "Frontend Developer",
-      period: "2025 – Present",
+      period: "Feb 2025 – Present",
       highlights: [
         "Develop enterprise UI features using Angular",
         "Implement REST API integrations",

@@ -1,5 +1,41 @@
 @import "tailwindcss";
 
+/* ── Marine Blue design tokens ───────────────────────────────────── */
+:root {
+  /* palette */
+  --color-primary:      #1F4E79;
+  --color-primary-dark: #163A5C;
+  --color-accent:       #3A7CA5;
+
+  /* backgrounds — shifted to light-medium scale */
+  --color-bg:           #DDE8F0;   /* page base: medium blue-gray tint (was #F7F9FB) */
+  --color-bg-alt:       #C8D9E6;   /* stronger alternate sections: Experience, Skills (was #EEF3F8) */
+  --color-bg-projects:  #D0DDE8;   /* projects section: sits between bg and bg-alt */
+  --color-surface:      #F0F5F9;   /* card surfaces: clearly lighter than section bg (was #FFFFFF) */
+  --color-surface-pure: #FFFFFF;   /* reserved for where true white is needed */
+
+  /* text */
+  --color-text:         #1E293B;
+  --color-text-muted:   #4A6580;   /* slightly darker than before (#64748B) for better contrast on tinted bg */
+
+  /* border — more visible against tinted backgrounds */
+  --color-border:       #AABFCF;   /* was #E2E8F0 — stepped up significantly */
+
+  /* hero — top-left anchored radial gives depth without a hard gradient band */
+  --color-hero-gradient: radial-gradient(ellipse 80% 60% at 20% 30%, #A8C8DF 0%, #C8DCE9 45%, #DDE8F0 100%);
+
+  /* contact section — dark marine */
+  --color-contact-bg:       var(--color-primary);
+  --color-contact-bg-deep:  var(--color-primary-dark);
+  --color-contact-text:     #E8F1F8;
+  --color-contact-muted:    #93B8D4;
+}
+
 html {
   scroll-behavior: smooth;
-}@import "tailwindcss";
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
