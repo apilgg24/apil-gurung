@@ -10,6 +10,7 @@ export type ProjectItem = {
   description: string
   tech: string[]
   link: string
+  screenshot?: string  // optional: path to a preview image
 }
 
 export type SiteData = {

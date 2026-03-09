@@ -10,8 +10,8 @@ export const siteData: SiteData = {
 
   links: {
     github: "https://github.com/your-username",
-    linkedin: "https://linkedin.com/in/your-profile",
-    upwork: "https://upwork.com/freelancers/your-profile",
+    linkedin: "https://www.linkedin.com/in/apilgg/",
+    upwork: "https://www.upwork.com/freelancers/~0185b53ce7f3d7e8a7",
   },
 
   skills: {
@@ -39,13 +39,6 @@ projects: [
     description:
       "A full-stack workflow concept for AI-assisted image prompt and processing flows.",
     tech: ["React", "Spring Boot"],
-    link: "#",
-  },
-  {
-    name: "Personal Resume Website",
-    description:
-      "A modern personal portfolio website built with React, Vite, TypeScript, and Tailwind CSS.",
-    tech: ["React", "Vite", "Tailwind"],
     link: "#",
   },
 ],

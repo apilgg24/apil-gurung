@@ -8,9 +8,9 @@ export default function Navbar() {
       }}
     >
       <div className="mx-auto max-w-5xl px-6 h-16 flex items-center justify-between">
-        <span className="font-semibold" style={{ color: "var(--color-primary)" }}>
+        <a href="#" className="font-semibold" style={{ color: "var(--color-primary)" }}>
           Apil Gurung
-        </span>
+        </a>
 
         <nav className="flex gap-6 text-sm" style={{ color: "var(--color-text-muted)" }}>
           {["experience", "projects", "skills", "contact"].map((section) => (
