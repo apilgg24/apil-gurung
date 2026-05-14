@@ -9,9 +9,11 @@ export const siteData: SiteData = {
   },
 
   links: {
-    github: "https://github.com/your-username",
+    github: "https://github.com/apilgg24",
     linkedin: "https://www.linkedin.com/in/apilgg/",
     upwork: "https://www.upwork.com/freelancers/~0185b53ce7f3d7e8a7",
+    email: "apil.gurung@gmail.com",
+    // resume: "/Apil_Gurung_Resume.pdf", // TODO(apil): drop a PDF in /public and uncomment
   },
 
   skills: {

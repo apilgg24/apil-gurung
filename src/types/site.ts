@@ -24,6 +24,8 @@ export type SiteData = {
     github: string
     linkedin: string
     upwork: string
+    email?: string
+    resume?: string
   }
   skills: {
     frontend: string[]
