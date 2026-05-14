@@ -3,6 +3,8 @@ export type ExperienceItem = {
   role: string
   period: string
   highlights: string[]
+  tech?: string[]
+  location?: string
 }
 
 export type ProjectItem = {
@@ -10,7 +12,10 @@ export type ProjectItem = {
   description: string
   tech: string[]
   link: string
-  screenshot?: string  // optional: path to a preview image
+  github?: string
+  screenshot?: string
+  category?: string
+  featured?: boolean
 }
 
 export type SiteData = {

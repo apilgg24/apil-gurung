@@ -25,23 +25,27 @@ export const siteData: SiteData = {
   experience: [
     {
       company: "Xcelerate Restoration Software",
-      role: "Frontend Developer",
-      period: "Feb 2025 – Present",
+      role: "Angular Frontend Developer",
+      period: "Feb 2025 – Apr 2026",
       highlights: [
         "Develop enterprise UI features using Angular",
         "Implement REST API integrations",
         "Collaborate with product and backend teams",
       ],
+      tech: ["Angular", "TypeScript", "RxJS", "REST APIs"],
     },
   ],
 
-projects: [
-  {
-    name: "RapidPhotoFlow",
-    description:
-      "A full-stack workflow concept for AI-assisted image prompt and processing flows.",
-    tech: ["React", "Spring Boot"],
-    link: "#",
-  },
-],
+  projects: [
+    {
+      name: "RapidPhotoFlow",
+      description:
+        "A full-stack workflow concept for AI-assisted image prompt and processing flows.",
+      tech: ["React", "Spring Boot"],
+      link: "#",
+      category: "Full-Stack",
+      featured: true,
+      // github: "https://github.com/apilgg24/rapidphotoflow", // uncomment when repo is public
+    },
+  ],
 }
