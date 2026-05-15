@@ -137,7 +137,7 @@ function ProjectCard({ project, index }: { project: ProjectItem; index: number }
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
           ) : (
-            <ProjectPreviewPlaceholder name={project.name} />
+            <ProjectPreviewPlaceholder name={project.name} theme={project.theme} />
           )}
         </div>
       </div>
@@ -145,7 +145,13 @@ function ProjectCard({ project, index }: { project: ProjectItem; index: number }
   )
 }
 
-function ProjectPreviewPlaceholder({ name }: { name: string }) {
+function ProjectPreviewPlaceholder({
+  name,
+  theme = "default",
+}: {
+  name: string
+  theme?: "default" | "plants"
+}) {
   const initials = name
     .split(/\s+/)
     .filter(Boolean)
@@ -153,13 +159,15 @@ function ProjectPreviewPlaceholder({ name }: { name: string }) {
     .map((w) => w[0]?.toUpperCase())
     .join("")
 
+  const background =
+    theme === "plants"
+      ? "linear-gradient(135deg, #C8E6C9 0%, #4CAF50 55%, #1B5E20 100%)"
+      : "linear-gradient(135deg, #A8C8DF 0%, #3A7CA5 60%, #1F4E79 100%)"
+
   return (
     <div
       className="flex h-full min-h-56 w-full items-center justify-center"
-      style={{
-        background:
-          "linear-gradient(135deg, #A8C8DF 0%, #3A7CA5 60%, #1F4E79 100%)",
-      }}
+      style={{ background }}
     >
       {/* Subtle grid overlay */}
       <div
@@ -173,7 +181,20 @@ function ProjectPreviewPlaceholder({ name }: { name: string }) {
       />
       <div className="relative flex flex-col items-center gap-3 text-center">
         <div className="grid h-20 w-20 place-items-center rounded-2xl bg-white/15 text-3xl font-bold text-white shadow-lg backdrop-blur-sm ring-1 ring-white/25">
-          {initials || "?"}
+          {theme === "plants" ? (
+            <svg
+              aria-hidden
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="text-white"
+            >
+              <path d="M12 22c0-4 1.5-7 4-9 2.5-2 5-2 5-2s0 3-2 5.5-5 3.5-7 5.5zM12 22c0-4-1.5-7-4-9-2.5-2-5-2-5-2s0 3 2 5.5 5 3.5 7 5.5zM12 22V10c0-3 1.5-6 4-8 0 0-1 4-1 8s-3 12-3 12z" />
+            </svg>
+          ) : (
+            initials || "?"
+          )}
         </div>
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/80">
           Preview coming soon

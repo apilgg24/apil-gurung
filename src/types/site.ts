@@ -16,6 +16,7 @@ export type ProjectItem = {
   screenshot?: string
   category?: string
   featured?: boolean
+  theme?: "default" | "plants"
 }
 
 export type SiteData = {

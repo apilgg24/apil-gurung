@@ -47,5 +47,15 @@ export const siteData: SiteData = {
       featured: true,
       // github: "https://github.com/apilgg24/rapidphotoflow", // uncomment when repo is public
     },
+    {
+      name: "Mala Plants",
+      description:
+        "A full-stack plant e-commerce platform with authentication, product listings, and image storage. Deployed on Vercel.",
+      tech: ["Angular 21", "TypeScript 5.9", "Supabase", "Tailwind CSS 4.2"],
+      link: "https://mala-plants.vercel.app",
+      github: "https://github.com/apilgg24/mala-plants",
+      category: "Full-Stack",
+      theme: "plants",
+    },
   ],
 }
