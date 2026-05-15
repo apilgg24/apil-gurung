@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 import HeroSection from "./sections/HeroSection"
 import ExperienceSection from "./sections/ExperienceSection"
 import ProjectsSection from "./sections/ProjectsSection"
@@ -9,11 +10,14 @@ function App() {
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
+      <main>
+        <HeroSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </>
   )
 }
