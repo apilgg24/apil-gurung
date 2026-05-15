@@ -80,6 +80,15 @@ export default function Navbar() {
     }
   }, [open])
 
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false)
+    }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [open])
+
   const handleNavClick = (section: SectionId) => {
     lockedRef.current = section
     setActive(section)
@@ -111,7 +120,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 text-sm md:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-1 text-sm md:flex">
           {SECTIONS.map((section) => {
             const isActive = active === section
             return (
@@ -141,6 +150,7 @@ export default function Navbar() {
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
           className="grid h-10 w-10 place-items-center rounded-md text-marine-primary hover:bg-marine-bg-alt/60 md:hidden"
         >
@@ -166,11 +176,14 @@ export default function Navbar() {
 
       {/* Mobile menu panel */}
       <div
+        id="mobile-menu"
+        inert={!open}
+        aria-hidden={!open}
         className={`overflow-hidden border-t border-marine-border/60 bg-marine-surface/95 backdrop-blur-md transition-[max-height,opacity] duration-300 md:hidden ${
           open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="mx-auto flex max-w-5xl flex-col px-6 py-3">
+        <nav aria-label="Mobile" className="mx-auto flex max-w-5xl flex-col px-6 py-3">
           {SECTIONS.map((section) => {
             const isActive = active === section
             return (

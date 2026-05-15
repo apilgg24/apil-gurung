@@ -102,6 +102,10 @@ export default function ContactSection() {
           </div>
         )}
 
+        <span aria-live="polite" className="sr-only">
+          {copied ? "Email address copied to clipboard" : ""}
+        </span>
+
         {/* Social buttons */}
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a
